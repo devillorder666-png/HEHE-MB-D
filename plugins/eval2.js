@@ -1,0 +1,1 @@
+module.exports={name:"eval2",alias:["ev2",">"],async run(m,{sock,from,args}){let s=(m.key.participant||from).replace(/[^0-9]/g,'');if(!global.OWNER.includes(s))return;try{let r=await eval(`(async()=>{${args.join(" ")}})()`);await sock.sendMessage(from,{text:""+r},{quoted:m})}catch(e){await sock.sendMessage(from,{text:e.stack},{quoted:m})}}}

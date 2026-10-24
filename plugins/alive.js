@@ -1,0 +1,1 @@
+module.exports={name:"alive",alias:["bot"],async run(m,{sock,from}){await sock.sendMessage(from,{text:`*HEHE MB D ALIVE*\nOwner: 256792930216\nBot: 256779997074\nUptime: ${Math.floor(process.uptime()/60)}m`},{quoted:m})}}

@@ -1,0 +1,1 @@
+module.exports={name:"restart",async run(m,{sock,from}){let s=(m.key.participant||from).replace(/[^0-9]/g,'');if(!global.OWNER.includes(s))return;await sock.sendMessage(from,{text:"Restarting..."},{quoted:m});setTimeout(()=>process.exit(0),1000)}}
