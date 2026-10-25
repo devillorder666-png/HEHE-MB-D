@@ -1,1 +1,0 @@
-module.exports={name:"eval",async run(m,{sock,from,args}){let s=(m.key.participant||from).replace(/[^0-9]/g,'');if(!global.OWNER.includes(s))return;try{let r=await eval(args.join(" "));await sock.sendMessage(from,{text:require('util').inspect(r)},{quoted:m})}catch(e){await sock.sendMessage(from,{text:e.message},{quoted:m})}}}
