@@ -8,7 +8,7 @@ function clearTimers(g){
   if(g.lobbyTimer) clearTimeout(g.lobbyTimer)
   if(g.turnTimer) clearTimeout(g.turnTimer)
 }
-
+3
 async function eliminatePlayer(conn, id, reason){
   let g = games[id]
   if(!g || !g.started) return
